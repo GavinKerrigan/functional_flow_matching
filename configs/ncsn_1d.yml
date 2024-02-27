@@ -1,0 +1,27 @@
+method: 'NCSN'
+
+# Forward Process Parameters
+sigma_1: 100.
+sigma_T: 0.01
+max_t: 10
+
+# GP parameters
+var: 1.
+length_scale: 0.1
+
+# Training / Optimization Parameters
+epochs: 50 # TOCHANGE
+#batch_size: 128
+optim_params:
+  lr: 0.001
+  weight_decay: 0  # FNO1d uses 1e-4
+loss: 'discrete'  # ['spectral', 'discrete', 'sobolev']
+precondition: False  # Precondition loss?
+normalize: True   # Normalize loss by support size?
+
+# Data parameters
+train_dims: [64]
+
+# Etc.
+device: 'cuda'  # ['cpu', 'cuda']
+dtype: 'double'  # ['float', 'double']

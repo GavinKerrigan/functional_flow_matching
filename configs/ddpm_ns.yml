@@ -1,0 +1,26 @@
+method: 'DDPM'
+
+# Forward Process Parameters
+beta_min: 1.0e-4
+beta_max: 0.02
+max_t: 1000
+
+# GP parameters
+var: 1.
+length_scale: 0.1
+
+# Training / Optimization Parameters
+epochs: 50 # TOCHANGE
+#batch_size: 128
+optim_params:
+  lr: 0.001
+  weight_decay: 0  # FNO1d uses 1e-4
+loss: 'discrete'  # ['spectral', 'discrete', 'sobolev']
+normalize: True  # Normalize loss by support size?
+
+# Data parameters
+train_dims: [64, 64]
+
+# Etc.
+device: 'cuda'  # ['cpu', 'cuda']
+dtype: 'double'  # ['float', 'double']
