@@ -13,7 +13,7 @@ Our code is roughly structured as follows:
 
 # Citation
 
-If you found our code useful or build upon our work, we ask that you cite our AISTATS 2024 paper as follows.
+If you found our code useful or build upon our work, we ask that you cite our AISTATS 2024 paper as follows:
 
 ```
 @inproceedings{kerrigan2024functional,
